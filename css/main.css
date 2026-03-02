@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("/scss/base/fonts/Satoshi-Regular.woff2") format("woff2"), url("/scss/base/fonts/Satoshi-Regular.woff") format("woff"), url("/scss/base/fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+* {
+  font-family: "Satoshi-Regular";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: none;
+}
+
+@media (min-width: 120rem) {
+  body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

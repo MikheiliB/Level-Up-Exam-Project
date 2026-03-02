@@ -1,0 +1,23 @@
+@use "../abstracts/variables";
+
+@mixin auto-grid($min-width, $gap: 2.4rem) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+}
+
+@mixin flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin fluid-text($min-size, $max-size, $min-vw: 32rem, $max-vw: 120rem) {
+    $slope: ($max-size - $min-size) / ($max-vw - $min-vw);
+    $intersection: -1 * $min-vw * $slope + $min-size;
+    font-size: clamp(
+        #{$min-size},
+        calc(#{$intersection} + #{$slope * 100}vw),
+        #{$max-size}
+    );
+}
