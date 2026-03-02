@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-@mixin fluid-text($min-size, $max-size, $min-vw: 32rem, $max-vw: 120rem) {
+@mixin fluid-text($min-size, $max-size, $min-vw: 39rem, $max-vw: 120rem) {
     $slope: ($max-size - $min-size) / ($max-vw - $min-vw);
     $intersection: -1 * $min-vw * $slope + $min-size;
     font-size: clamp(
