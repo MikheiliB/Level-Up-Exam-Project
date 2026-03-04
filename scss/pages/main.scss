@@ -1,5 +1,6 @@
 @use "../base/reset";
 @use "../base/typography";
+@use "../abstracts/variables";
 @use "../layout/navigation";
 @use "../layout/header";
 @use "../layout/maincontent";
@@ -9,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: variables.$bg-color;
 }
 
 .sidebar {
@@ -19,7 +21,7 @@ body {
     body {
         display: flex;
         flex-direction: row;
-        min-height: 100vh;
+        min-height: 100vh; 
     }
 }
 
