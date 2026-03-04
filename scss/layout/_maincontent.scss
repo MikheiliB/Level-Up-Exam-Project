@@ -38,6 +38,41 @@ $card-colors: (
   
 }
 
+
+$mix-colors: (
+    green: variables.$mix-green,
+    yellow: variables.$mix-yellow,
+    blue: variables.$mix-blue,
+    dblue: variables.$mix-dark-blue,
+    pink: variables.$mix-pink,
+    orange: variables.$mix-orange,
+    dgreen: variables.$mix-dark-green,
+    purple: variables.$mix-purple
+);
+
+@each $name, $color in $mix-colors {
+    .main-card.#{$name} {
+        .main-card-boxes-one {
+        background-color: darken($color, 15%);
+        }
+
+        .main-card-boxes-two {
+        background-color: darken($color, 20%);
+        }
+
+        .main-card-boxes-three {
+        background-color: darken($color, 30%);
+        }
+
+        .collection-count {
+        color: $color;
+        }
+    }
+  
+}
+
+
+
 .main-cards {
     margin-top: 3rem;
     display: flex;
@@ -68,7 +103,7 @@ $card-colors: (
         .main-card {
             position: relative;
             min-width: 14.1rem;
-
+            
             &-img {
                 flex: 0 0 auto;
                 max-width: 100%;
@@ -113,10 +148,75 @@ $card-colors: (
                 margin-top: 0.604rem;
                 margin-bottom: 0.8rem;
 
-                .collection-title {
-                    color: variables.$primary-color;
-                    @include mixins.fluid-text(1.1rem, 1.4rem);
+            }
+            .collection-title {
+                color: variables.$primary-color;
+                @include mixins.fluid-text(1.1rem, 1.4rem);
+            }
+
+            .podcast-box {
+                margin-top: 0.5rem;
+                position: relative;
+                border-radius: 0.6rem;
+                display: flex;
+                flex-direction: column;
+                padding: 0.7rem 1rem 0.7rem 1.2rem;
+
+                .podcast-color {
+                    position: absolute;
+                    width: 0.5rem;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    border-radius: 0.6rem 0 0 0.6rem;
                 }
+
+                .podcast-title {
+                    display: flex;
+                    gap: 0.9rem;
+                }
+
+                .main-podcast-img {
+                    width: 2rem;
+                }
+
+                .podcast-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.6rem;
+                }
+            }
+
+            &.egreen {
+                .podcast-box {
+                    background-color: rgba(59, 177, 59, 0.05);
+                }
+                .podcast-color {
+                    background-color: rgba(133, 197, 133, 0.6);
+                }
+            }
+            &.jskin {
+                .podcast-box {
+                    background-color: rgba(241, 206, 188, 0.05);
+                }
+                .podcast-color {
+                    background-color: rgba(241, 206, 188, 0.6);
+                }
+            }
+            &.worange {
+                .podcast-box {
+                    background-color: rgba(246, 125, 77, 0.05);
+                }
+                .podcast-color {
+                    background-color: rgba(246, 125, 77, 0.6);
+                }
+            }
+
+
+            &-books {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
             }
 
             .collection-desc {
@@ -124,10 +224,89 @@ $card-colors: (
                 @include mixins.fluid-text(0.9rem, 1.2rem);
                 padding-right: 0.2rem;
             }
-        }
 
+            &-albums{
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+
+            &.ablue {
+                .main-card-boxes-one {
+                    background-color: rgba(187, 180, 216, 0.3);
+                }
+            }
+            &.agreen {
+                .main-card-boxes-one {
+                    background-color: rgba(117, 164, 150, 0.3);
+                }
+            }
+            &.apurple {
+                .main-card-boxes-one {
+                    background-color: rgba(98, 120, 177, 0.3);
+                }
+            }
+        }
+        
         &::-webkit-scrollbar {
             display: none;
         }
+
+        &.bottom {
+            margin-bottom: 7rem;
+        }
+        
+    }
+    &-artists {
+        display: flex;
+        gap: 0.9rem;
+        padding-top: 1.5rem;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+
+        .artists-card {
+            min-width: 14rem;
+            display: flex;
+            flex-direction: column;
+            
+            .artist-image {
+                flex: 0 0 auto;
+                max-width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+            .card-artist-name {
+                @include mixins.fluid-text(1.2rem, 1.4rem);
+                margin-top: 1rem;
+                text-align: center;
+                color: variables.$primary-color;
+            }
+        }
+
+       
+    }
+}
+
+
+@media (min-width: 60rem) {
+
+    .main-cards {
+        padding: 0 2.5rem;
+        &-row {
+            overflow-x: hidden;
+        }
+    }
+
+
+    .main-card {
+        max-width: 17rem;
+        flex: 0 0 auto;
+        
+    }
+
+    .artists-card {
+        max-width: 17rem;
+        flex: 0 0 auto;
     }
 }

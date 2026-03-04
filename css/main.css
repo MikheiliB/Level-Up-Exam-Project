@@ -228,6 +228,110 @@ ol, ul {
   color: #C3E7B7;
 }
 
+.main-card.green .main-card-boxes-one {
+  background-color: rgb(180.0644171779, 241.7760736196, 28.7239263804);
+}
+.main-card.green .main-card-boxes-two {
+  background-color: rgb(168.3435582822, 231.472392638, 13.527607362);
+}
+.main-card.green .main-card-boxes-three {
+  background-color: rgb(133.3006134969, 183.2883435583, 10.7116564417);
+}
+.main-card.green .collection-count {
+  color: #CCF665;
+}
+
+.main-card.yellow .main-card-boxes-one {
+  background-color: rgb(210.5138248848, 192.5552995392, 5.9861751152);
+}
+.main-card.yellow .main-card-boxes-two {
+  background-color: rgb(185.7188940092, 169.8755760369, 5.2811059908);
+}
+.main-card.yellow .main-card-boxes-three {
+  background-color: rgb(136.1290322581, 124.5161290323, 3.8709677419);
+}
+.main-card.yellow .collection-count {
+  color: #F9E72C;
+}
+
+.main-card.blue .main-card-boxes-one {
+  background-color: rgb(88.4782608696, 230.0217391304, 206.7086956522);
+}
+.main-card.blue .main-card-boxes-two {
+  background-color: rgb(66.3043478261, 226.6956521739, 200.2782608696);
+}
+.main-card.blue .main-card-boxes-three {
+  background-color: rgb(31.5652173913, 210.4347826087, 180.9739130435);
+}
+.main-card.blue .collection-count {
+  color: #9BF0E2;
+}
+
+.main-card.dblue .main-card-boxes-one {
+  background-color: rgb(34.5, 69.71875, 255);
+}
+.main-card.dblue .main-card-boxes-two {
+  background-color: rgb(9, 48.2916666667, 255);
+}
+.main-card.dblue .main-card-boxes-three {
+  background-color: rgb(0, 34.0208333333, 213);
+}
+.main-card.dblue .collection-count {
+  color: #6F86FF;
+}
+
+.main-card.pink .main-card-boxes-one {
+  background-color: rgb(255, 126.5, 148.7403846154);
+}
+.main-card.pink .main-card-boxes-two {
+  background-color: rgb(255, 101, 127.6538461538);
+}
+.main-card.pink .main-card-boxes-three {
+  background-color: rgb(255, 50, 85.4807692308);
+}
+.main-card.pink .collection-count {
+  color: #FFCBD4;
+}
+
+.main-card.orange .main-card-boxes-one {
+  background-color: rgb(255, 169.1225165563, 27.5);
+}
+.main-card.orange .main-card-boxes-two {
+  background-color: rgb(255, 159.4966887417, 2);
+}
+.main-card.orange .main-card-boxes-three {
+  background-color: rgb(206, 128.238410596, 0);
+}
+.main-card.orange .collection-count {
+  color: #FFC668;
+}
+
+.main-card.dgreen .main-card-boxes-one {
+  background-color: rgb(21.6540697674, 73.8459302326, 59.4098837209);
+}
+.main-card.dgreen .main-card-boxes-two {
+  background-color: rgb(15.8720930233, 54.1279069767, 43.5465116279);
+}
+.main-card.dgreen .main-card-boxes-three {
+  background-color: rgb(4.3081395349, 14.6918604651, 11.8197674419);
+}
+.main-card.dgreen .collection-count {
+  color: #27856B;
+}
+
+.main-card.purple .main-card-boxes-one {
+  background-color: rgb(150.55625, 12.94375, 94.69375);
+}
+.main-card.purple .main-card-boxes-two {
+  background-color: rgb(127.075, 10.925, 79.925);
+}
+.main-card.purple .main-card-boxes-three {
+  background-color: rgb(80.1125, 6.8875, 50.3875);
+}
+.main-card.purple .collection-count {
+  color: #DD138B;
+}
+
 .main-cards {
   margin-top: 3rem;
   display: flex;
@@ -298,19 +402,128 @@ ol, ul {
   margin-top: 0.604rem;
   margin-bottom: 0.8rem;
 }
-.main-cards-row .main-card-text .collection-title {
+.main-cards-row .main-card .collection-title {
   color: #E0E0E0;
   font-size: clamp(1.1rem, 0.9555555556rem + 0.3703703704vw, 1.4rem);
+}
+.main-cards-row .main-card .podcast-box {
+  margin-top: 0.5rem;
+  position: relative;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 1rem 0.7rem 1.2rem;
+}
+.main-cards-row .main-card .podcast-box .podcast-color {
+  position: absolute;
+  width: 0.5rem;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.6rem 0 0 0.6rem;
+}
+.main-cards-row .main-card .podcast-box .podcast-title {
+  display: flex;
+  gap: 0.9rem;
+}
+.main-cards-row .main-card .podcast-box .main-podcast-img {
+  width: 2rem;
+}
+.main-cards-row .main-card .podcast-box .podcast-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.main-cards-row .main-card.egreen .podcast-box {
+  background-color: rgba(59, 177, 59, 0.05);
+}
+.main-cards-row .main-card.egreen .podcast-color {
+  background-color: rgba(133, 197, 133, 0.6);
+}
+.main-cards-row .main-card.jskin .podcast-box {
+  background-color: rgba(241, 206, 188, 0.05);
+}
+.main-cards-row .main-card.jskin .podcast-color {
+  background-color: rgba(241, 206, 188, 0.6);
+}
+.main-cards-row .main-card.worange .podcast-box {
+  background-color: rgba(246, 125, 77, 0.05);
+}
+.main-cards-row .main-card.worange .podcast-color {
+  background-color: rgba(246, 125, 77, 0.6);
+}
+.main-cards-row .main-card-books {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .main-cards-row .main-card .collection-desc {
   color: #898989;
   font-size: clamp(0.9rem, 0.7555555556rem + 0.3703703704vw, 1.2rem);
   padding-right: 0.2rem;
 }
+.main-cards-row .main-card-albums {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.main-cards-row .main-card.ablue .main-card-boxes-one {
+  background-color: rgba(187, 180, 216, 0.3);
+}
+.main-cards-row .main-card.agreen .main-card-boxes-one {
+  background-color: rgba(117, 164, 150, 0.3);
+}
+.main-cards-row .main-card.apurple .main-card-boxes-one {
+  background-color: rgba(98, 120, 177, 0.3);
+}
 .main-cards-row::-webkit-scrollbar {
   display: none;
 }
+.main-cards-row.bottom {
+  margin-bottom: 7rem;
+}
+.main-cards-artists {
+  display: flex;
+  gap: 0.9rem;
+  padding-top: 1.5rem;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scrollbar-width: none;
+}
+.main-cards-artists .artists-card {
+  min-width: 14rem;
+  display: flex;
+  flex-direction: column;
+}
+.main-cards-artists .artists-card .artist-image {
+  flex: 0 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.main-cards-artists .artists-card .card-artist-name {
+  font-size: clamp(1.2rem, 1.1037037037rem + 0.2469135802vw, 1.4rem);
+  margin-top: 1rem;
+  text-align: center;
+  color: #E0E0E0;
+}
 
+@media (min-width: 60rem) {
+  .main-cards {
+    padding: 0 2.5rem;
+  }
+  .main-cards-row {
+    overflow-x: hidden;
+  }
+  .main-card {
+    max-width: 17rem;
+    flex: 0 0 auto;
+  }
+  .artists-card {
+    max-width: 17rem;
+    flex: 0 0 auto;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
