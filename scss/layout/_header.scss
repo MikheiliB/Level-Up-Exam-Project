@@ -3,19 +3,21 @@
 
 .header-nav {
     width: 100%;
-    gap: 20px;
     position: fixed;
     bottom: 0;
     left: 0;
-    padding: 20px;
+    padding: 1.5rem;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, #111111 42.62%);
+    backdrop-filter: blur(1rem);
     .nav-phone {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding: 1rem;
+    }
         .nav-item {
             @include mixins.flex-col-center;
-            color: rgba(137, 137, 137, 1);
+            color: variables.$header-text;
         }
         .nav-icon {
             width: 2.4rem;
@@ -29,6 +31,58 @@
             line-height: 100%;
             letter-spacing: 3%;
             color: variables.$header-text;
+        }
+    }
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1.3rem;
+        right: 0;
+        // display: none;
+        .action-item { 
+            display: flex;          
+            width: 2.4rem;
+            height: 2.4rem;
+            img {
+                width: 100%
+            }          
+        }
+    }
+@media (max-width: 76.8rem) {
+    .header-actions,
+    .action-item {
+        display: none;
+    }
+}
+
+
+@media (min-width: 76.8rem) {
+    .header-nav {
+        position: static;
+        width: 100%;
+        padding: 0 1rem;
+    .nav-phone {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+    }
+    .nav-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }    
+        .library,
+        .nav-title .library {
+            display: none;
+        }
+        .person, 
+        .nav-title .person {
+            display: none;
+        }
+        .nav-icon {
+            margin-bottom: 0;
         }
     }
 }
