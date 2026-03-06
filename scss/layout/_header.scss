@@ -3,9 +3,7 @@
 
 .header-nav {
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    @include mixins.fixed-layout();
     padding: 1.5rem;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, #111111 42.62%);
     backdrop-filter: blur(1rem);
@@ -38,7 +36,6 @@
         align-items: center;
         justify-content: flex-end;
         gap: 1.3rem;
-        right: 0;
         // display: none;
         .action-item { 
             display: flex;          

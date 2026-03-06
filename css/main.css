@@ -41,6 +41,8 @@ ol, ul {
   position: fixed;
   bottom: 0;
   left: 0;
+  right: 0;
+  z-index: 1000;
   padding: 1.5rem;
   background: linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, #111111 42.62%);
   backdrop-filter: blur(1rem);
@@ -77,7 +79,6 @@ ol, ul {
   align-items: center;
   justify-content: flex-end;
   gap: 1.3rem;
-  right: 0;
 }
 .header-actions .action-item {
   display: flex;
@@ -121,6 +122,93 @@ ol, ul {
   }
   .header-nav .nav-icon {
     margin-bottom: 0;
+  }
+}
+.player-section {
+  position: fixed;
+  bottom: 9.5rem;
+  left: 0.8rem;
+  right: 0.7rem;
+  z-index: 1000;
+  background-color: rgb(51, 56, 66);
+  border-radius: 1rem;
+  padding: 0, 8rem;
+}
+.player-section .player-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+.player-section .player-text {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.player-section .player-text:hover {
+  transform: scale(1.1);
+}
+.player-section .player-text:active {
+  transform: scale(1.1);
+}
+.player-section .player-title {
+  font-family: Satoshi;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  letter-spacing: 3%;
+  color: rgb(219, 219, 219);
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  mask-image: linear-gradient(to right, rgb(26, 25, 25) 20%, transparent 100%);
+  animation: revealText 0.8s ease-out forwards;
+  cursor: pointer;
+}
+.player-section .player-artist {
+  font-family: Satoshi;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 100%;
+  letter-spacing: 3%;
+  color: rgb(137, 137, 137);
+  animation: revealText 0.8s ease-out 0.2s forwards;
+}
+.player-section .like-btn, .player-section .resume-btn {
+  border-width: 2px 2px 2px 2px;
+  border-color: solid rgb(137, 137, 137);
+  width: auto;
+  transition: all 0.3s ease;
+  color: rgb(137, 137, 137);
+  cursor: pointer;
+}
+.player-section .like-btn:hover, .player-section .resume-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.player-section .like-btn:active, .player-section .resume-btn:active {
+  transform: scale(0.95);
+}
+
+.player-line {
+  position: fixed;
+  width: 15.9rem;
+  left: 2rem;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 0.5rem;
+}
+
+@keyframes revealText {
+  from {
+    clip-path: inset(0 0 0 100%);
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 body {
