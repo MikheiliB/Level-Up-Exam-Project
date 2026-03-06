@@ -38,6 +38,35 @@ $card-colors: (
   
 }
 
+@mixin playbtn {
+    display: flex;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #1ED760;
+    cursor: pointer;
+}
+
+@mixin playbtn-appear($right, $bottom) {
+    position: absolute;
+    right: $right;
+    bottom: $bottom;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #1ED760;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+    z-index: 10;
+}
+
 
 $mix-colors: (
     green: variables.$mix-green,
@@ -85,6 +114,15 @@ $mix-colors: (
         justify-content: space-between;
         padding-right: 1rem;
 
+        .card-nav {
+            display: flex;
+            gap: 1.342rem;
+            cursor: pointer;
+            &-arrow-left, &-arrow-right {
+                display: none;
+            }
+        }
+
         .card-title {
             color: variables.$primary-color;
             font-size: variables.$h3-text;
@@ -103,7 +141,12 @@ $mix-colors: (
         .main-card {
             position: relative;
             min-width: 14.1rem;
-            
+            cursor: pointer;
+
+            &-playbtn {
+                @include playbtn();
+            }
+
             &-img {
                 flex: 0 0 auto;
                 max-width: 100%;
@@ -269,6 +312,7 @@ $mix-colors: (
             min-width: 14rem;
             display: flex;
             flex-direction: column;
+            cursor: pointer;
             
             .artist-image {
                 flex: 0 0 auto;
@@ -294,19 +338,86 @@ $mix-colors: (
     .main-cards {
         padding: 0 2.5rem;
         &-row {
+            overflow-y: hidden;
             overflow-x: hidden;
         }
+        .card-nav-arrow-left {
+            display: block;
+            filter: brightness(50%);
+        }
+        
+        .card-nav-arrow-right {
+            display: block;
+            transition: filter 0.2s linear 0.1ms;
+
+            &:hover {
+                filter: brightness(75%);
+                transform: scale(105%);
+            }
+        }
+
+        .card-settings {
+            transition: filter 0.2s linear 0.1ms;
+            
+            &:hover {
+                filter: brightness(75%);
+                transform: scale(105%);
+            }
+        }
     }
+
 
 
     .main-card {
         max-width: 17rem;
         flex: 0 0 auto;
+        transition: transform 0.25s ease;
+
+        .main-card-boxes-one,
+        .main-card-boxes-two,
+        .main-card-boxes-three {
+        transition: transform 0.5s ease;
+        }
+
+        &:hover {  
+            transform: scale(101%);
+
+            
+            .main-card-boxes-one {
+                transform: translateY(-3px);
+            }
+            .main-card-boxes-two {
+                transform: translateY(-4px);
+            }
+            .main-card-boxes-three {
+                transform: translateY(-5px);
+            }
+
+        }
+
         
     }
 
+    .main-card-playbtn {
+        @include playbtn-appear(1rem, 8.2rem)
+    }
+
+
+    .main-card:hover .main-card-playbtn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .main-cards-artists {
+        overflow-y: hidden;
+    }
     .artists-card {
         max-width: 17rem;
         flex: 0 0 auto;
+
+        &:hover {
+            transition: transform 0.25s ease;
+            transform: scale(101%);
+        }
     }
 }
