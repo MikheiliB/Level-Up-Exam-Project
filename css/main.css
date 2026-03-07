@@ -366,12 +366,16 @@ ol, ul {
   scrollbar-width: none;
 }
 .main-cards-row .main-card {
+  display: flex;
+  flex-direction: column;
   position: relative;
   min-width: 14.1rem;
+  max-width: 17rem;
   cursor: pointer;
 }
 .main-cards-row .main-card-playbtn {
   display: flex;
+  position: absolute;
   opacity: 0;
   transform: translateY(1rem);
   transition: opacity 0.35s ease, transform 0.35s ease;
@@ -388,6 +392,9 @@ ol, ul {
   border-radius: 0.602rem;
   z-index: 4;
   position: relative;
+}
+.main-cards-row .main-card-img .books {
+  flex: 0 0 auto;
 }
 .main-cards-row .main-card-boxes-one {
   position: absolute;
@@ -419,8 +426,8 @@ ol, ul {
 .main-cards-row .main-card-text {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.604rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 0.604rem;
 }
 .main-cards-row .main-card .collection-title {
   color: #E0E0E0;
@@ -476,11 +483,13 @@ ol, ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 0.604rem;
 }
 .main-cards-row .main-card .collection-desc {
   color: #898989;
   font-size: clamp(0.9rem, 0.7555555556rem + 0.3703703704vw, 1.2rem);
   padding-right: 0.2rem;
+  margin-top: 0.604rem;
 }
 .main-cards-row .main-card-albums {
   display: flex;
@@ -512,6 +521,7 @@ ol, ul {
 }
 .main-cards-artists .artists-card {
   min-width: 14rem;
+  max-width: 17rem;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -531,7 +541,10 @@ ol, ul {
 
 @media (min-width: 60rem) {
   .main-cards {
-    padding: 0 2.5rem;
+    border-radius: 1rem;
+    border: 0.1rem solid #202020;
+    padding: 2.5rem 2.5rem;
+    margin-top: 0;
   }
   .main-cards-row {
     overflow-y: hidden;
@@ -541,6 +554,9 @@ ol, ul {
     display: block;
     filter: brightness(50%);
   }
+  .main-cards .card-nav-arrow-left:hover {
+    transform: scale(105%);
+  }
   .main-cards .card-nav-arrow-right {
     display: block;
     transition: filter 0.2s linear 0.1ms;
@@ -548,6 +564,9 @@ ol, ul {
   .main-cards .card-nav-arrow-right:hover {
     filter: brightness(75%);
     transform: scale(105%);
+  }
+  .main-cards .card-nav-arrow-right.impossible {
+    filter: brightness(50%);
   }
   .main-cards .card-settings {
     transition: filter 0.2s linear 0.1ms;
@@ -581,7 +600,7 @@ ol, ul {
   .main-card-playbtn {
     position: absolute;
     right: 1rem;
-    bottom: 8.2rem;
+    bottom: 8.9rem;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -621,11 +640,14 @@ body {
   display: none;
 }
 
-@media (min-width: 120rem) {
+@media (min-width: 60rem) {
   body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+  }
+  body .main-section {
+    width: calc(100vw - 25.9rem);
   }
 }
 

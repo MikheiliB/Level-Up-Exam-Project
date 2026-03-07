@@ -17,11 +17,15 @@ body {
     display: none;
 }
 
-@media (min-width: 120rem) {
+@media (min-width: 60rem) {
     body {
         display: flex;
         flex-direction: row;
         min-height: 100vh; 
+
+        .main-section {
+            width: calc(100vw - 25.9rem);
+        }
     }
 }
 

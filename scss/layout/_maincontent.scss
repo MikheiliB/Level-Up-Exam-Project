@@ -40,6 +40,7 @@ $card-colors: (
 
 @mixin playbtn {
     display: flex;
+    position: absolute;
     opacity: 0;
     transform: translateY(1rem);
     transition: opacity 0.35s ease, transform 0.35s ease;
@@ -139,8 +140,11 @@ $mix-colors: (
         scrollbar-width: none;
 
         .main-card {
+            display: flex;
+            flex-direction: column;
             position: relative;
             min-width: 14.1rem;
+            max-width: 17rem;
             cursor: pointer;
 
             &-playbtn {
@@ -154,6 +158,10 @@ $mix-colors: (
                 border-radius: 0.602rem;
                 z-index: 4;
                 position: relative;
+
+                & .books {
+                    flex: 0 0 auto;
+                }
             }
 
             &-boxes-one {
@@ -188,8 +196,8 @@ $mix-colors: (
             &-text {
                 display: flex;
                 justify-content: space-between;
-                margin-top: 0.604rem;
-                margin-bottom: 0.8rem;
+                margin-top: 1rem;
+                margin-bottom: 0.604rem;
 
             }
             .collection-title {
@@ -260,12 +268,14 @@ $mix-colors: (
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
+                margin-top: 0.604rem;
             }
 
             .collection-desc {
                 color: variables.$player-artist-text;
                 @include mixins.fluid-text(0.9rem, 1.2rem);
                 padding-right: 0.2rem;
+                margin-top: 0.604rem;
             }
 
             &-albums{
@@ -310,6 +320,7 @@ $mix-colors: (
 
         .artists-card {
             min-width: 14rem;
+            max-width: 17rem;
             display: flex;
             flex-direction: column;
             cursor: pointer;
@@ -336,7 +347,10 @@ $mix-colors: (
 @media (min-width: 60rem) {
 
     .main-cards {
-        padding: 0 2.5rem;
+        border-radius: 1rem;
+        border: 0.1rem solid #202020;
+        padding: 2.5rem 2.5rem;
+        margin-top: 0;
         &-row {
             overflow-y: hidden;
             overflow-x: hidden;
@@ -344,6 +358,9 @@ $mix-colors: (
         .card-nav-arrow-left {
             display: block;
             filter: brightness(50%);
+                &:hover {
+                transform: scale(105%);
+            }
         }
         
         .card-nav-arrow-right {
@@ -353,6 +370,10 @@ $mix-colors: (
             &:hover {
                 filter: brightness(75%);
                 transform: scale(105%);
+            }
+
+            &.impossible {
+                filter: brightness(50%);
             }
         }
 
@@ -399,7 +420,7 @@ $mix-colors: (
     }
 
     .main-card-playbtn {
-        @include playbtn-appear(1rem, 8.2rem)
+        @include playbtn-appear(1rem, 8.9rem)
     }
 
 
