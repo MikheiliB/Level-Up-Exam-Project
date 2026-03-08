@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotifly</title>
     <link rel="stylesheet" href="/css/main.css">
+    <script src="./script/main.js" defer></script>
 </head>
 <body>
     <!-- 
@@ -88,7 +89,7 @@
         horizontal scroll has to be responsive and normal.
         I have not added the artists row to the main section so that has to be done as well.
         -->
-        <section class="main-section">
+        <section class="main-section" id="main-section">
 
 
             <!-- <section class="main-section-filters">
@@ -618,6 +619,58 @@
                         </section>
                     </section>
                 </section>
+            </section>
+        </section>
+
+        <section class="friends-section" id="friends-section">
+            <section class="friends-header">
+                <h2 class="friends-title">Friends Activity</h2>
+                <section class="friends-actions">
+                    <img src="./assets/images/addfriend.png" alt="find friends" class="friends-actions-btn">
+                    <button class="close-btn" id="close-button">
+                        <img src="./assets/images/closesection.png" alt="close" class="friends-actions-btn">
+                    </button>
+                </section>
+            </section>
+            <section class="friends-box">
+                <div class="friend">
+                    <img src="./assets/images/friend4.png" alt="friend picture" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">FriendlyMusicListener</span>
+                        <div class="friend-activity">
+                            <img src="./assets/images/online now.png" alt="active friend">
+                            <span class="friend-activity-song">Goosebumps <span class="friend-activity-artist">· Travis Scott</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="friend">
+                    <img src="./assets/images/friend1.png" alt="friend picture" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">AverageMusicEnjoyer</span>
+                        <div class="friend-activity">
+                            <img src="./assets/images/online now.png" alt="active friend">
+                            <span class="friend-activity-song">Get Lucky <span class="friend-activity-artist">· Daft Punk</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="friend">
+                    <img src="./assets/images/friend2.png" alt="friend picture" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">MusicEnthusiast</span>
+                        <div class="friend-activity">
+                            <span class="friend-activity-song offline"><span class="friend-activity-artist">1h</span> would he <span class="friend-activity-artist">· joji</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="friend">
+                    <img src="./assets/images/friend3.png" alt="friend picture" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">IListenToMusic56</span>
+                        <div class="friend-activity">
+                            <span class="friend-activity-song offline"><span class="friend-activity-artist">1h</span> Rockstar <span class="friend-activity-artist">· Post Malone</span></span>
+                        </div>
+                    </div>
+                </div>
             </section>
         </section>
 

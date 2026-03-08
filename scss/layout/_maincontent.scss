@@ -131,6 +131,7 @@ $mix-colors: (
     }
 
     &-row {
+        position: relative;
         display: flex;
         gap: 0.9rem;
         padding-top: 1.6rem;
@@ -310,6 +311,7 @@ $mix-colors: (
         }
         
     }
+
     &-artists {
         display: flex;
         gap: 0.9rem;
@@ -346,10 +348,27 @@ $mix-colors: (
 
 @media (min-width: 60rem) {
 
+    .main-cards-row::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5rem;
+        height: 100%;
+        pointer-events: none;
+        z-index: 20;
+
+        background: linear-gradient(
+            to right,
+            rgba(14,14,14,0),
+            rgba(14,14,14,1)
+        );
+    }
+
     .main-cards {
         border-radius: 1rem;
         border: 0.1rem solid #202020;
-        padding: 2.5rem 2.5rem;
+        padding: 2.5rem;
         margin-top: 0;
         &-row {
             overflow-y: hidden;
