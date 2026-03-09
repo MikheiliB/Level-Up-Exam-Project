@@ -1,2 +1,111 @@
 @use "../abstracts/mixins";
 @use "../abstracts/variables";
+
+.main-section-filters {
+  padding: 1.6rem 0;
+
+  .filter-buttons {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2.4rem;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .filter-button {
+      background-color: $button-inactive;
+      color: $primary-color;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 0.8rem;
+      font-size: $small-text;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background-color: $player-color;
+      }
+    }
+
+    .other-filter {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+
+  .recents-list {
+    @include auto-grid(18rem, 0.8rem);
+
+    .recent-item {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.4rem;
+      background-color: $button-inactive;
+      border-radius: 1rem;
+      overflow: hidden;
+      text-decoration: none;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: $player-color;
+      }
+
+      .recent-item-img {
+        width: 5.6rem;
+        height: 5.6rem;
+        border-radius: 0.8rem;
+        object-fit: cover;
+      }
+
+      div {
+        padding: 0 0.8rem;
+        overflow: hidden;
+      }
+
+      .recent-item-title {
+        display: block;
+        color: $primary-color;
+        @include fluid-text(1.2rem, 1.3rem);
+        margin-bottom: 0.4rem;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .recent-item-artist {
+        display: block;
+        color: $player-artist-text;
+        font-size: $small-text;
+      }
+    }
+  }
+}
+
+.filter-button:first-child {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+
+  .main-section-filters {
+
+    .recents-list {
+      display: none;
+    }
+
+    .filter-button:first-child {
+      display: flex !important;
+      align-items: center;
+    }
+
+    .filter-buttons {
+      margin-bottom: 0 !important;
+    }
+
+  }
+
+}
