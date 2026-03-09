@@ -10,7 +10,7 @@
     .nav-phone {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 1rem;
     }
         .nav-item {
@@ -52,17 +52,18 @@
         display: none;
     }
 }
-
-
 @media (min-width: 76.8rem) {
     .header-nav {
-        position: static;
+        position: fixed;
         width: 100%;
         padding: 0 1rem;
+        top: 0;
+        bottom: auto;
     .nav-phone {
         display: flex;
         text-align: center;
         flex-direction: row;
+        justify-content: space-between;
     }
     .nav-item {
         display: flex;

@@ -33,11 +33,26 @@
     right: $right;
     z-index: 1000;
 }
-@mixin player-text-style ($size: 1.4rem, $color, $weight: 400, $lh: 100%) {
+@mixin player-text-style ($color, $size: 1.4rem, $weight: 400, $lh: 100%) {
         font-family: Satoshi;
-        font-weight: $weight;
+        font-weight: $weight;  
+        color: $color;
         font-size: $size;
         line-height: $lh;
         letter-spacing: 3%;
-        color: $color;
+        
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin icon-hover ($opacity: 0.6, $time: 0.3s) {
+    filter:grayscale(1);
+    opacity: $opacity;
+    transition: $time;
+    &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
 }
