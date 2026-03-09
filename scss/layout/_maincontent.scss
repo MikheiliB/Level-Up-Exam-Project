@@ -2,31 +2,48 @@
 @use "../abstracts/variables";
 
 .main-section-filters {
-  padding: 1.6rem 0;
+  padding: 1.3rem 1.5rem;
 
   .filter-buttons {
     display: flex;
-    gap: 0.8rem;
-    margin-bottom: 2.4rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.2rem;
     overflow-x: auto;
 
     &::-webkit-scrollbar {
       display: none;
     }
 
+    
+    .filter-left {
+      display: flex;
+      gap: 1rem;
+    }
+    
     .filter-button {
-      background-color: $button-inactive;
-      color: $primary-color;
+      background-color: variables.$card-secondary;
+      color: variables.$primary-color;
       border: none;
-      padding: 0.8rem 1.6rem;
+      padding: 0.8rem 1.5rem;
       border-radius: 0.8rem;
-      font-size: $small-text;
+      font-size: variables.$small-text;
       white-space: nowrap;
       cursor: pointer;
-      transition: background 0.2s ease;
+      transition: background-color 0.2s ease;
+      
+      &.desktop {
+        display: none;
+      }
 
       &:hover {
-        background-color: $player-color;
+        background-color: variables.$player-color;
+      }
+
+      &.other {
+        border: none;
+        background-color: transparent;
+        padding: 0;
       }
     }
 
@@ -37,20 +54,20 @@
   }
 
   .recents-list {
-    @include auto-grid(18rem, 0.8rem);
+    @include mixins.auto-grid(17rem, 0.8rem);
 
     .recent-item {
       display: flex;
       align-items: center;
       padding: 1rem 1.4rem;
-      background-color: $button-inactive;
+      background-color: variables.$card-secondary;
       border-radius: 1rem;
       overflow: hidden;
       text-decoration: none;
-      transition: background 0.3s;
+      transition: background-color 0.3s;
 
       &:hover {
-        background-color: $player-color;
+        background-color: variables.$player-color;
       }
 
       .recent-item-img {
@@ -60,15 +77,15 @@
         object-fit: cover;
       }
 
-      div {
+      &-desc {
         padding: 0 0.8rem;
         overflow: hidden;
       }
 
       .recent-item-title {
         display: block;
-        color: $primary-color;
-        @include fluid-text(1.2rem, 1.3rem);
+        color: variables.$primary-color;
+        @include mixins.fluid-text(1.2rem, 1.3rem);
         margin-bottom: 0.4rem;
 
         white-space: nowrap;
@@ -78,18 +95,18 @@
 
       .recent-item-artist {
         display: block;
-        color: $player-artist-text;
-        font-size: $small-text;
+        color: variables.$player-artist-text;
+        font-size: variables.$small-text;
       }
     }
   }
 }
 
-.filter-button:first-child {
-  display: none !important;
-}
+// .filter-button:first-child {
+//   display: none !important;
+// }
 
-@media (min-width: 1024px) {
+@media (min-width: 60rem) {
 
   .main-section-filters {
 
@@ -104,6 +121,14 @@
 
     .filter-buttons {
       margin-bottom: 0 !important;
+      
+
+      .filter-button.desktop {
+        display: block;
+        background-color: variables.$primary-color;
+        color: #111111;
+        font-weight: 700;
+      }
     }
 
   }
