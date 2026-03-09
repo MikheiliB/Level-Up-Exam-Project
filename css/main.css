@@ -67,6 +67,9 @@ ol, ul {
 .main-section-filters .filter-buttons .filter-button.desktop {
   display: none;
 }
+.main-section-filters .filter-buttons .filter-button.desktop:hover {
+  background-color: rgb(198.5, 198.5, 198.5);
+}
 .main-section-filters .filter-buttons .filter-button:hover {
   background-color: #333842;
 }

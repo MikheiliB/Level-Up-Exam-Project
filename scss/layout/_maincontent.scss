@@ -34,6 +34,10 @@
       
       &.desktop {
         display: none;
+
+        &:hover {
+          background-color: darken(variables.$primary-color, 10%);
+        }
       }
 
       &:hover {
