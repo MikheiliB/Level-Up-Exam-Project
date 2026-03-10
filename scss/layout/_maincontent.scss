@@ -110,32 +110,6 @@
 //   display: none !important;
 // }
 
-@media (min-width: 60rem) {
-
-  .main-section-filters {
-
-    .recents-list {
-      display: none;
-    }
-
-    .filter-button:first-child {
-      display: flex !important;
-      align-items: center;
-    }
-
-    .filter-buttons {
-      margin-bottom: 0 !important;
-      
-
-      .filter-button.desktop {
-        display: block;
-        background-color: variables.$primary-color;
-        color: #111111;
-        font-weight: 700;
-      }
-    }
-
-  }
 
 
 $card-colors: (
@@ -483,6 +457,33 @@ $mix-colors: (
 
 
 @media (min-width: 60rem) {
+
+
+    .main-section-filters {
+
+        .recents-list {
+        display: none;
+        }
+
+        .filter-button:first-child {
+        display: flex !important;
+        align-items: center;
+        }
+
+        .filter-buttons {
+        margin-bottom: 0 !important;
+        
+
+        .filter-button.desktop {
+            display: block;
+            background-color: variables.$primary-color;
+            color: #111111;
+            font-weight: 700;
+        }
+        }
+
+    }
+
 
     .main-cards-row::after {
         content: "";
