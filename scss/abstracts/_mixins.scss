@@ -10,7 +10,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
+
 
 @mixin fluid-text($min-size, $max-size, $min-vw: 39rem, $max-vw: 120rem) {
     $slope: ($max-size - $min-size) / ($max-vw - $min-vw);
@@ -20,4 +22,37 @@
         calc(#{$intersection} + #{$slope * 100}vw),
         #{$max-size}
     );
+}
+
+
+// <!-- This is my section, JULIE-->
+@mixin fixed-layout ($bottom: 0, $left: 0, $right: 0) {
+    position: fixed;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    z-index: 1000;
+}
+@mixin player-text-style ($color, $size: 1.4rem, $weight: 400, $lh: 100%) {
+        font-family: Satoshi;
+        font-weight: $weight;  
+        color: $color;
+        font-size: $size;
+        line-height: $lh;
+        letter-spacing: 3%;
+        
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin icon-hover ($opacity: 0.6, $time: 0.3s) {
+    filter:grayscale(1);
+    opacity: $opacity;
+    transition: $time;
+    &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
 }

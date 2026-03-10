@@ -1,4 +1,72 @@
 @use "../abstracts/mixins";
 @use "../abstracts/variables";
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 259px; 
+    height: 100vh;
+    background-color: variables.$bg-color;
+    // padding: 0.8rem 1.6rem; 
+}
+
+.sidebar-actions {
+   padding: 0.8rem 1.6rem; 
+}
+
+
+.sidebar-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 1.7rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+
+.sidebar-action:hover {
+    background-color: variables.$button-inactive;
+}
+
+
+.action-name {
+    display: flex;
+    align-items: center;
+    // text-decoration: none;
+    color: variables.$header-text; 
+    font-size: 1.4rem;
+    font-weight: 400;
+    // flex-grow: 1;
+}
+
+
+.action-icon {
+    max-width: 2.4rem;
+    height: auto;
+    margin-right: 18px; 
+    object-fit: contain;
+}
+
+
+.dropdown-button {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-button img {
+    width: 1.8rem; 
+    height: 1.8rem;
+    // opacity: 0.6;
+    color: variables.$header-text;
+}
+
+
+@media (max-width: 76.8rem) {
+
+    .sidebar {
+        display: none;
+    }
+}
 
