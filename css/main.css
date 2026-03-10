@@ -36,6 +36,111 @@ ol, ul {
   font-family: "Satoshi-Regular";
 }
 
+.main-section-filters {
+  padding: 1.3rem 1.5rem;
+}
+.main-section-filters .filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.2rem;
+  overflow-x: auto;
+}
+.main-section-filters .filter-buttons::-webkit-scrollbar {
+  display: none;
+}
+.main-section-filters .filter-buttons .filter-left {
+  display: flex;
+  gap: 1rem;
+}
+.main-section-filters .filter-buttons .filter-button {
+  background-color: #202020;
+  color: #E0E0E0;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.8rem;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.main-section-filters .filter-buttons .filter-button.desktop {
+  display: none;
+}
+.main-section-filters .filter-buttons .filter-button.desktop:hover {
+  background-color: rgb(198.5, 198.5, 198.5);
+}
+.main-section-filters .filter-buttons .filter-button:hover {
+  background-color: #333842;
+}
+.main-section-filters .filter-buttons .filter-button.other {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.main-section-filters .filter-buttons .other-filter {
+  margin-left: auto;
+  cursor: pointer;
+}
+.main-section-filters .recents-list {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+}
+.main-section-filters .recents-list .recent-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  background-color: #202020;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.main-section-filters .recents-list .recent-item:hover {
+  background-color: #333842;
+}
+.main-section-filters .recents-list .recent-item .recent-item-img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 0.8rem;
+  object-fit: cover;
+}
+.main-section-filters .recents-list .recent-item-desc {
+  padding: 0 0.8rem;
+  overflow: hidden;
+}
+.main-section-filters .recents-list .recent-item .recent-item-title {
+  display: block;
+  color: #E0E0E0;
+  font-size: clamp(1.2rem, 1.1518518519rem + 0.1234567901vw, 1.3rem);
+  margin-bottom: 0.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main-section-filters .recents-list .recent-item .recent-item-artist {
+  display: block;
+  color: #898989;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 60rem) {
+  .main-section-filters .recents-list {
+    display: none;
+  }
+  .main-section-filters .filter-button:first-child {
+    display: flex !important;
+    align-items: center;
+  }
+  .main-section-filters .filter-buttons {
+    margin-bottom: 0 !important;
+  }
+  .main-section-filters .filter-buttons .filter-button.desktop {
+    display: block;
+    background-color: #E0E0E0;
+    color: #111111;
+    font-weight: 700;
 .main-card-boxes-one.pink {
   background-color: rgb(179.0077319588, 60.4922680412, 114.8118556701);
 }
