@@ -1,25 +1,45 @@
 @use "../base/reset";
 @use "../base/typography";
+@use "../abstracts/variables";
 @use "../layout/navigation";
 @use "../layout/header";
 @use "../layout/maincontent";
 @use "../layout/player";
+// @use "../layout/friends";
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: variables.$bg-color;
+
+    .main-section {
+        width: 100%;
+    }
+
+    .friends-section {
+        display: none;
+    }
 }
 
 .sidebar {
     display: none;
 }
 
-@media (min-width: 120rem) {
+@media (min-width: 60rem) {
     body {
         display: flex;
         flex-direction: row;
-        min-height: 100vh;
+        height: 100vh; 
+        overflow-x: hidden;
+
+        .main-section {
+            width: calc(100vw - 25.9rem);
+            // width: calc(100vw - 63.7rem);
+            position: relative;
+            left: 25.9rem;
+            height: 100vh;
+        }
     }
 }
 
