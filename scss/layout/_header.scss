@@ -55,10 +55,11 @@
 @media (min-width: 76.8rem) {
     .header-nav {
         position: fixed;
-        width: 100%;
+        width: calc(100vw - 25.9rem);
+        left: 25.9rem;
+        height: 5.4rem;
         padding: 0 1rem;
         top: 0;
-        bottom: auto;
     .nav-phone {
         display: flex;
         text-align: center;

@@ -88,11 +88,6 @@ ol, ul {
   color: rgb(137, 137, 137);
 }
 
-.sidebar-action:first-child .action-name {
-  color: #121212;
-  font-weight: 500;
-}
-
 @media (max-width: 76.8rem) {
   .sidebar {
     display: none;
@@ -160,10 +155,11 @@ ol, ul {
 @media (min-width: 76.8rem) {
   .header-nav {
     position: fixed;
-    width: 100%;
+    width: calc(100vw - 25.9rem);
+    left: 25.9rem;
+    height: 5.4rem;
     padding: 0 1rem;
     top: 0;
-    bottom: auto;
   }
   .header-nav .nav-phone {
     display: flex;
@@ -220,8 +216,8 @@ ol, ul {
 .player-section .player-title {
   font-family: Satoshi;
   font-weight: 400;
-  color: 1.4rem;
-  font-size: rgb(219, 219, 219);
+  color: rgb(219, 219, 219);
+  font-size: 1.4rem;
   line-height: 100%;
   letter-spacing: 3%;
   display: flex;
@@ -234,8 +230,8 @@ ol, ul {
 .player-section .player-artist {
   font-family: Satoshi;
   font-weight: 400;
-  color: 1.4rem;
-  font-size: rgb(137, 137, 137);
+  color: rgb(137, 137, 137);
+  font-size: 1.4rem;
   line-height: 100%;
   letter-spacing: 3%;
   animation: revealText 0.8s ease-out 0.2s forwards;
@@ -254,6 +250,10 @@ ol, ul {
 }
 .player-section .like-btn:active, .player-section .resume-btn:active {
   transform: scale(0.95);
+}
+
+.player-img {
+  display: block;
 }
 
 .player-line {
@@ -290,15 +290,18 @@ ol, ul {
   }
   .player-extra {
     display: flex;
-    margin-left: 18.9rem;
     gap: 1.5rem;
+  }
+  .player-other-img {
+    display: none;
   }
   .player-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 8.1rem;
-    gap: 3rem;
+    width: calc(100vw - 25.9rem);
+    left: 25.9rem;
     position: fixed;
     bottom: 0;
     padding: 0.8rem 1.6rem;
@@ -340,17 +343,18 @@ ol, ul {
   height: 5.6rem;
   border-radius: 0.4rem;
 }
-.player-card .player-info {
+
+.player-info {
   display: flex;
   flex-direction: column;
 }
-.player-card .player-info .player-desk-title {
+.player-info .player-desk-title {
   color: #fff;
   font-size: 1.4rem;
   font-weight: 500;
 }
-.player-card .player-info .player-desk-artist,
-.player-card .player-info .player-desk-album {
+.player-info .player-desk-artist,
+.player-info .player-desk-album {
   color: #b3b3b3;
   font-size: 1.2rem;
   text-wrap: nowrap;
@@ -385,7 +389,7 @@ ol, ul {
   color: rgb(137, 137, 137);
 }
 .player-timeline .player-progress-wrapper {
-  width: 31.7rem;
+  width: 27rem;
   height: 0.4rem;
   background-color: rgba(137, 137, 137, 0.27);
   border-radius: 0.2rem;
@@ -394,7 +398,7 @@ ol, ul {
 .player-timeline .player-line {
   position: absolute;
   height: 100%;
-  width: 40%;
+  width: 30%;
   background-color: rgb(224, 224, 224);
   border-radius: 0.2rem;
   display: block !important;
@@ -428,6 +432,12 @@ body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+  }
+  main {
+    width: calc(100vw - 25.9rem);
+    position: relative;
+    left: 25.9rem;
+    height: 100vh;
   }
   .sidebar {
     display: block;

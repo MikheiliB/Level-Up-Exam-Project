@@ -25,8 +25,8 @@
         }
     }
     .player-title {
-        @include mixins.player-text-style 
-        (1.4rem, variables.$player-text-linear, 400, 100%);
+        @include mixins.player-text-style
+        (variables.$player-text-linear, 1.4rem, 400, 100%);
         display: flex;
         overflow: hidden;
         white-space: nowrap;
@@ -36,7 +36,7 @@
     }        
     .player-artist {
         @include mixins.player-text-style 
-        (1.4rem, variables.$header-text, 400, 100%);
+        (variables.$header-text, 1.4rem, 400, 100%);
         animation: revealText 0.8s ease-out 0.2s forwards;
     }
     
@@ -55,6 +55,10 @@
             transform: scale(0.95);
         }
     }
+}
+
+.player-img {
+    display: block;
 }
 .player-line {
     position: fixed;
@@ -91,8 +95,11 @@
     } 
     .player-extra {
         display: flex; 
-        margin-left: 18.9rem; 
         gap: 1.5rem;
+    }
+
+    .player-other-img {
+        display: none;
     }
 
     .player-section {
@@ -100,7 +107,8 @@
         align-items: center;
         justify-content: space-between;
         height: 8.1rem;
-        gap: 3rem;
+        width: calc(100vw - 25.9rem);
+        left: 25.9rem;
         position: fixed;
         bottom: 0;
         padding: 0.8rem 1.6rem;
@@ -129,6 +137,7 @@
     }
 }
 
+
 .player-actions {
         gap: 1.5rem;
         
@@ -147,23 +156,24 @@
             width: 5.6rem;
             height: 5.6rem;
             border-radius: 0.4rem;
+
         }
 
-        .player-info {
-            display: flex;
-            flex-direction: column;
-            
-            .player-desk-title {
-                color: #fff;
-                font-size: 1.4rem;
-                font-weight: 500;
-            }
-            .player-desk-artist, 
-            .player-desk-album {
-                color: #b3b3b3;
-                font-size: 1.2rem;
-                text-wrap: nowrap;
-            }
+    }
+    .player-info {
+        display: flex;
+        flex-direction: column;
+        
+        .player-desk-title {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        .player-desk-artist, 
+        .player-desk-album {
+            color: #b3b3b3;
+            font-size: 1.2rem;
+            text-wrap: nowrap;
         }
     }
 
@@ -199,7 +209,7 @@
     }
 
     .player-progress-wrapper {
-        width: 31.7rem; 
+        width: 27rem; 
         height: 0.4rem;
         background-color: rgba(137, 137, 137, 0.27);
         border-radius: 0.2rem;
@@ -209,7 +219,7 @@
     .player-line {
         position: absolute;
         height: 100%;
-        width: 40%; 
+        width: 30%; 
         background-color: rgba(224, 224, 224, 1);
         border-radius: 0.2rem;
         display: block !important;

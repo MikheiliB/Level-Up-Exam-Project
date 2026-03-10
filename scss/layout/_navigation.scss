@@ -7,7 +7,7 @@
     left: 0;
     width: 259px; 
     height: 100vh;
-    background-color: #111111;
+    background-color: variables.$bg-color;
     // padding: 0.8rem 1.6rem; 
 }
 
@@ -63,10 +63,6 @@
 }
 
 
-.sidebar-action:first-child .action-name {
-    color: #121212;
-    font-weight: 500;
-}
 @media (max-width: 76.8rem) {
 
     .sidebar {
