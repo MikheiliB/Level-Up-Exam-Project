@@ -15,6 +15,7 @@ body {
 
     .main-section {
         width: 100%;
+        margin-bottom: 12rem;
     }
 
     .friends-section {
@@ -31,12 +32,10 @@ body {
         overflow-x: hidden;
 
         .main-section {
-            margin-top: 3rem;
-            width: calc(100vw - 25.9rem);
-            // width: calc(100vw - 63.7rem);
+            margin-top: 6.5rem;
+            padding-bottom: 3rem;
             position: relative;
             // left: 5.9rem;
-            height: 100vh;
         }
     }
     main {

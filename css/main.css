@@ -809,7 +809,7 @@ ol, ul {
   .main-cards {
     border-radius: 1rem;
     border: 0.1rem solid #202020;
-    padding: 2.5rem;
+    padding: 0 2.5rem;
     margin-top: 0;
   }
   .main-cards-row {
@@ -1138,6 +1138,7 @@ body {
 }
 body .main-section {
   width: 100%;
+  margin-bottom: 12rem;
 }
 body .friends-section {
   display: none;
@@ -1151,10 +1152,9 @@ body .friends-section {
     overflow-x: hidden;
   }
   body .main-section {
-    margin-top: 3rem;
-    width: calc(100vw - 25.9rem);
+    margin-top: 6.5rem;
+    padding-bottom: 3rem;
     position: relative;
-    height: 100vh;
   }
   main {
     width: calc(100vw - 25.9rem);
