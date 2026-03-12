@@ -145,6 +145,10 @@ ol, ul {
 .header-actions .action-item img {
   width: 100%;
 }
+.header-actions #open-friends {
+  border: none;
+  background-color: transparent;
+}
 
 @media (max-width: 60rem) {
   .header-actions,
@@ -1130,6 +1134,83 @@ ol, ul {
   width: 1.8rem;
 }
 
+@media (min-width: 60rem) {
+  .friends-section {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 35.8rem;
+    height: 100vh;
+    border-radius: 1rem;
+    border: 0.1rem solid #202020;
+    padding: 2rem 2.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    margin-top: 6.5rem;
+  }
+  .friends-section .friends-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .friends-section .friends-header .friends-actions {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    cursor: pointer;
+  }
+  .friends-section .friends-header .friends-title {
+    color: #E0E0E0;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  .friends-section .friends-header .close-btn {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+  }
+  .friends-section .friends-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .friends-section .friends-box .friend {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .friends-section .friends-box .friend .friend-img {
+    max-width: 4rem;
+    height: auto;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .friends-section .friends-box .friend .friend-name {
+    color: #E0E0E0;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  .friends-section .friends-box .friend .friend-activity {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+  .friends-section .friends-box .friend .friend-activity-song {
+    color: #E0E0E0;
+    cursor: pointer;
+  }
+  .friends-section .friends-box .friend .friend-activity-song.offline {
+    margin-left: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .friends-section .friends-box .friend .friend-activity-artist {
+    color: #898989;
+    cursor: pointer;
+  }
+}
 body {
   display: flex;
   flex-direction: column;

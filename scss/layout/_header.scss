@@ -45,6 +45,11 @@
                 width: 100%
             }          
         }
+
+        #open-friends {
+            border: none;
+            background-color: transparent;
+        }
     }
 @media (max-width: 60rem) {
     .header-actions,

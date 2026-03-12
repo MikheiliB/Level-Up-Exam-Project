@@ -5,7 +5,7 @@
 @use "../layout/header";
 @use "../layout/maincontent";
 @use "../layout/player";
-// @use "../layout/friends";
+@use "../layout/friends";
 
 body {
     display: flex;
@@ -37,6 +37,10 @@ body {
             position: relative;
             // left: 5.9rem;
         }
+
+        // .friends-section {
+        //     display: block;
+        // }
     }
     main {
         width: calc(100vw - 25.9rem);
