@@ -1,3 +1,4 @@
+# This is Julieta's Section of the readme file.
 
 This project is a responsive frontend layout built with HTML and CSS.
 The goal of the project was to practice layout structuring,responsive design, and UI styling.
@@ -5,45 +6,32 @@ The goal of the project was to practice layout structuring,responsive design, an
 
                             Features:
 
-Responsive layout for desktop and mobile
-Header with action buttons
-Player section with visual effects
-Aside section with responsive behavior
-Bottom navigation for mobile view
-Button hover effects
-Media queries for responsive adjustments
+1. Responsive layout for desktop and mobile
+2. Header with action buttons
+3. Player section with visual effects
+4. Aside section with responsive behavior
+5. Bottom navigation for mobile view
+6. Button hover effects
+7. Media queries for responsive adjustments
 
 
                             Project structures:
 
-Header - main navigation and actions
-Player section - main content area with controls and visuals
-Aside - additional information panel
-Bottom navigation - mobile navigation controls
+1. Header - main navigation and actions
+2. Player section - main content area with controls and visuals
+3. Aside - additional information panel
+4. Bottom navigation - mobile navigation controls
 
                             Project details:
 
-Images used in the layout are stored in the assets folder.
-Several styling changes were made during development, including spacing fixes, color adjustments, and improvements to responsive behavior.
-This project was mainly focused on practicing layout structure and responsive design.
-# Level-Up-Exam-Project
-
-Here we will drop updates and features and similar ideas.
-
-# This is Julieta's Section of the readme file.
-
-
-
-
-
-
+1. Images used in the layout are stored in the assets folder.
+2. Several styling changes were made during development, including spacing fixes, color adjustments, and improvements to responsive behavior.
+3. This project was mainly focused on practicing layout structure and responsive design.
 
 
 # This is Sandro's Section of the readme file.
 
 Sandro Made recents list for mobile design, added filter buttons. made everything responsive both for the mobile and desktop design. gave hover animations to the buttons. helped the team with code merging and bug fixing.
-
-
 
 
 # This is Mikheili's Section of the readme file.
