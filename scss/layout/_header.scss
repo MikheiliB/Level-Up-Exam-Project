@@ -16,6 +16,14 @@
         .nav-item {
             @include mixins.flex-col-center;
             color: variables.$header-text;
+            @include mixins.icon-hover;
+            transition: background-color 0.2s ease;
+            padding: 1.7rem;
+            justify-content: space-between;
+            &:hover {
+                background-color: variables.$button-inactive;
+                border-radius: 0.8rem;
+            }   
         }
         .nav-icon {
             width: 2.4rem;
@@ -41,6 +49,7 @@
             display: flex;          
             width: 2.4rem;
             height: 2.4rem;
+            @include mixins.icon-hover;
             img {
                 width: 100%
             }          
