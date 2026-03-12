@@ -149,6 +149,7 @@
     align-items: center;
     gap: 1rem;
     margin-left: 2rem;
+    flex-grow: 1;
     .player-time {
         font-size: 1.1rem;
         color: variables.$header-text;
@@ -202,6 +203,7 @@
     .player-info {
         display: none;
         display: flex; 
+        flex-grow: 1;
     } 
     .player-extra {
         display: flex; 
