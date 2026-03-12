@@ -1091,6 +1091,7 @@ ol, ul {
   align-items: center;
   gap: 1rem;
   margin-left: 2rem;
+  flex-grow: 1;
 }
 .player-timeline .player-time {
   font-size: 1.1rem;
@@ -1143,10 +1144,10 @@ ol, ul {
   .player-info {
     display: none;
     display: flex;
+    flex-grow: 1;
   }
   .player-extra {
     display: flex;
-    gap: 1.5rem;
   }
   .player-other-img {
     display: none;
