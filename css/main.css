@@ -108,15 +108,15 @@ ol, ul {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1.5rem;
   background: linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, #111111 42.62%);
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(0.3rem);
 }
 .header-nav .nav-phone {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 1rem;
+  padding-inline: 1rem;
+  height: 9.5rem;
 }
 .header-nav .nav-item {
   display: flex;
@@ -943,7 +943,7 @@ ol, ul {
   justify-content: space-around;
   align-items: center;
   gap: 2rem;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 .player-section .player-text {
   display: flex;
@@ -999,7 +999,8 @@ ol, ul {
 }
 
 .player-line {
-  position: fixed;
+  position: absolute;
+  bottom: 0;
   width: 15.9rem;
   border: 1px solid rgb(224, 224, 224);
   border-radius: 0.5rem;
@@ -1045,7 +1046,6 @@ ol, ul {
   justify-content: flex-start;
 }
 .player-card .player-other-img {
-  width: 5.6rem;
   border-radius: 0.4rem;
 }
 
@@ -1114,7 +1114,7 @@ ol, ul {
   background-color: rgb(224, 224, 224);
   border-radius: 0.2rem;
   display: block;
-  left: 0;
+  left: 0.8rem;
 }
 
 .player-main-btn {
