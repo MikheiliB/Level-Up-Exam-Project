@@ -997,6 +997,7 @@ ol, ul {
 
 .player-img {
   display: block;
+  cursor: pointer;
 }
 
 .player-line {
@@ -1060,12 +1061,14 @@ ol, ul {
   color: #fff;
   font-size: 1.4rem;
   font-weight: 500;
+  cursor: pointer;
 }
 .player-info .player-desk-artist,
 .player-info .player-desk-album {
   color: #b3b3b3;
   font-size: 1.2rem;
   text-wrap: nowrap;
+  cursor: pointer;
 }
 
 .player-extra {
@@ -1103,6 +1106,7 @@ ol, ul {
   background-color: rgba(137, 137, 137, 0.27);
   border-radius: 0.2rem;
   position: relative;
+  cursor: pointer;
 }
 .player-timeline .player-line {
   position: absolute;
@@ -1160,6 +1164,19 @@ ol, ul {
     bottom: 0;
     padding: 0.8rem 1.6rem;
   }
+  .player-volume-icon {
+    cursor: pointer;
+    filter: grayscale(1);
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+  .player-volume-icon:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  .player-volume-icon:hover {
+    opacity: 1;
+  }
 }
 @media (max-width: 60rem) {
   .player-actions,
@@ -1203,6 +1220,18 @@ ol, ul {
     justify-content: center;
     gap: 2.5rem;
     cursor: pointer;
+  }
+  .friends-section .friends-header .friends-actions-btn {
+    filter: grayscale(1);
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+  .friends-section .friends-header .friends-actions-btn:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  .friends-section .friends-header .friends-actions-btn:hover {
+    opacity: 1;
   }
   .friends-section .friends-header .friends-title {
     color: #E0E0E0;

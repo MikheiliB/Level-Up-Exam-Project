@@ -28,6 +28,13 @@
                 justify-content: center;
                 gap: 2.5rem;
                 cursor: pointer;
+                
+                &-btn {
+                    @include mixins.icon-hover;
+                    &:hover { 
+                        opacity: 1; 
+                    }
+                }
             }
 
             .friends-title {
