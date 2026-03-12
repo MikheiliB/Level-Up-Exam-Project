@@ -1096,7 +1096,9 @@ ol, ul {
   color: rgb(137, 137, 137);
 }
 .player-timeline .player-progress-wrapper {
-  width: 27rem;
+  width: 100%;
+  min-width: 10rem;
+  max-width: 50rem;
   height: 0.4rem;
   background-color: rgba(137, 137, 137, 0.27);
   border-radius: 0.2rem;
