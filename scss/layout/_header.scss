@@ -47,8 +47,8 @@
         // display: none;
         .action-item { 
             display: flex;          
-            width: 2.4rem;
-            height: 2.4rem;
+            // width: 2.4rem;
+            // height: 2.4rem;
             @include mixins.icon-hover;
             img {
                 width: 100%

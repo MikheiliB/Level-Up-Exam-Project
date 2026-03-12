@@ -63,7 +63,7 @@
 .player-line {
     position: fixed;
     width: 15.9rem;
-    left: 2rem;
+    // left: 2rem;
     border: 1px solid rgba(224, 224, 224, 1);
     border-radius: 0.5rem;
 }
@@ -101,13 +101,11 @@
     .player-card {
         gap: 1.2rem;
         justify-content: flex-start;     
-        .player-img {
+        .player-other-img {
             width: 5.6rem;
-            height: 5.6rem;
+            // height: 5.6rem;
             border-radius: 0.4rem;
-
         }
-
     }
     .player-info {
         display: flex;
@@ -129,11 +127,10 @@
         padding-inline: 1rem;
         
         .player-extra-icon {
-            width: 2rem;
+            // width: 2rem;
             opacity: 0.7;
             cursor: pointer;
-            transition: 0.2s;
-            
+            transition: 0.2s;   
             &:hover { 
                 opacity: 1; 
             }

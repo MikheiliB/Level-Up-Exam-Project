@@ -163,8 +163,6 @@ ol, ul {
 }
 .header-actions .action-item {
   display: flex;
-  width: 2.4rem;
-  height: 2.4rem;
   filter: grayscale(1);
   opacity: 0.6;
   transition: 0.3s;
@@ -998,7 +996,6 @@ ol, ul {
 .player-line {
   position: fixed;
   width: 15.9rem;
-  left: 2rem;
   border: 1px solid rgb(224, 224, 224);
   border-radius: 0.5rem;
 }
@@ -1042,9 +1039,8 @@ ol, ul {
   gap: 1.2rem;
   justify-content: flex-start;
 }
-.player-card .player-img {
+.player-card .player-other-img {
   width: 5.6rem;
-  height: 5.6rem;
   border-radius: 0.4rem;
 }
 
@@ -1069,7 +1065,6 @@ ol, ul {
   padding-inline: 1rem;
 }
 .player-extra .player-extra-icon {
-  width: 2rem;
   opacity: 0.7;
   cursor: pointer;
   transition: 0.2s;
