@@ -1,3 +1,46 @@
+# Level-up: Spotify Project
+
+## Project Overview 
+in this project we built responsive design for spotify app, distributed the tasks to work side by side and contributed to project together
+
+## Team Contributions
+| Team Member | Owned Scope |
+|------------|-------------|
+| მიხეილი | Main Section, Friends Section |
+| ჯულიეტა | Sidebar Section, Header Section, Player Section |
+| სანდრო | Filter Section, Recents Section |
+
+## Team Decisions
+
+### Development Approach
+decided to build the project using mobile first approach and then making the design responsive for the desktop.
+
+### Task Distribution
+had initial meetings where we planned and picked different sections of the design as tasks to do. Everyone had some responsibilities and everyone participated in team meetings during merge/fix processes.
+
+### Team Communication
+held weekly meetings where we would update eachother about the progress we were making and we discussed ways of improving the design
+
+### Naming Convention
+Initially we came up with one certain approach to naming classes, using conventional commits, and comments within the code.
+
+### Team Lead
+Team lead **Mikheili Bliadze**
+Responsibilities: Coordination, task distribution, help and support with the bugs within the code, bug fixing, code merging.
+
+### Workflow
+Every task had its own branch that in the end merged with the test branch to see how the code worked and functioned to be merged afterwards with the main branch
+
+### Tech Stack
+- HTML
+- CSS / SASS
+- JS(Just a little bit)
+- Git / GitHub
+
+
+### individual notes that we posted during code development
+
+
 # This is Julieta's Section of the readme file.
 
 This project is a responsive frontend layout built with HTML and CSS.
