@@ -59,6 +59,7 @@
 
 .player-img {
     display: block;
+    cursor: pointer;
 }
 .player-line {
     position: fixed;
@@ -114,12 +115,14 @@
             color: #fff;
             font-size: 1.4rem;
             font-weight: 500;
+            cursor: pointer;
         }
         .player-desk-artist, 
         .player-desk-album {
             color: #b3b3b3;
             font-size: 1.2rem;
             text-wrap: nowrap;
+            cursor: pointer;
         }
     }   
     .player-extra {
@@ -156,6 +159,7 @@
         background-color: rgba(137, 137, 137, 0.27);
         border-radius: 0.2rem;
         position: relative;
+        cursor: pointer;
     }
     .player-line {
         position: absolute;
@@ -214,6 +218,14 @@
         position: fixed;
         bottom: 0;
         padding: 0.8rem 1.6rem;
+    }
+    .player-volume-icon {
+        cursor: pointer;
+        @include mixins.icon-hover;
+            
+        &:hover { 
+            opacity: 1; 
+        }
     }
 }
 
