@@ -108,6 +108,7 @@ ol, ul {
   left: 0;
   right: 0;
   z-index: 1000;
+  padding: 1.5rem;
   background: linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, #111111 42.62%);
   backdrop-filter: blur(0.3rem);
 }
@@ -199,6 +200,7 @@ ol, ul {
     text-align: center;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 3rem;
   }
   .header-nav .nav-item {
     display: flex;

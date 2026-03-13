@@ -4,7 +4,7 @@
 .header-nav {
     width: 100%;
     @include mixins.fixed-layout();
-    // padding: 1.5rem;
+    padding: 1.5rem;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0.85) 0%, #111111 42.62%);
     backdrop-filter: blur(0.3rem);
     .nav-phone {
@@ -80,6 +80,7 @@
         text-align: center;
         flex-direction: row;
         justify-content: space-between;
+        padding-bottom: 3rem;
     }
     .nav-item {
         display: flex;
