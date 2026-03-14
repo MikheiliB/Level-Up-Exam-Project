@@ -35,12 +35,12 @@
 }
 @mixin player-text-style ($color, $size: 1.4rem, $weight: 400, $lh: 100%) {
         font-family: Satoshi;
-        font-weight: $weight;  
+        font-weight: $weight;
         color: $color;
         font-size: $size;
         line-height: $lh;
         // letter-spacing: 3%;
-        
+
 }
 @mixin flex-center {
     display: flex;
@@ -60,23 +60,23 @@
 // Search mixins
 
 @mixin card-text-style {
-    color: $card-text-col;
-    font-weight: $crd-txt-fnt-wght;
-    font-size: $crd-fnt-size;
-    font-family: $all-txt-font;
+    color: variables.$card-text-col;
+    font-weight: variables.$crd-txt-fnt-wght;
+    font-size: variables.$crd-fnt-size;
+    font-family: variables.$all-txt-font;
     line-height: 1.2;
     letter-spacing: -0.02em; 
 }
 @mixin main-title-style {
-    color: $main-titl-col;
-    font-weight: $main-titl-fnt-wght;
-    font-family: $all-txt-font;
-    font-size: $crd-fnt-size;
+    color: variables.$main-titl-col;
+    font-weight: variables.$main-titl-fnt-wght;
+    font-family: variables.$all-txt-font;
+    font-size: variables.$crd-fnt-size;
     margin-bottom: 2rem;
 }
 @mixin section-text-style {
-    font-family: $all-txt-font;
-    font-weight: $section-titl-wght;
-    font-size: $section-titl-font-size;
-    color: $main-titl-col;
+    font-family: variables.$all-txt-font;
+    font-weight: variables.$section-titl-wght;
+    font-size: variables.$section-titl-font-size;
+    color: variables.$main-titl-col;
 }

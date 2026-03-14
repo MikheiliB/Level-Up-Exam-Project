@@ -22,7 +22,7 @@ figure, figcaption {
 .section-title {
     @include mixins.section-text-style;
 }
-.discover-container {
+.main-section {
     padding: 1.5rem; 
 }
 
@@ -41,7 +41,7 @@ figure, figcaption {
 
 
 .searches-artist img {
-    max-width: 100%;
+    max-width: 17rem;
     border-radius: 50%;
     object-fit: cover;
     
@@ -50,12 +50,12 @@ figure, figcaption {
     height: auto;
     position: relative;
 }
- img {
+ .artist-images {
    
     position: relative;
     z-index: 2;
-    width: 100%;
-    height: 100%;
+    min-width: 14rem;
+    max-width: 17rem;
     object-fit: cover;
     border-radius: 1rem;
     // border: 1px solid #ccc;
@@ -70,8 +70,8 @@ figure, figcaption {
     position: absolute;
     z-index: 1;
     top: -1rem;
-    right: 0.6rem;
-    width: 95%;
+    right: -0.55rem;
+    width: 107%;
     height: 100%;
     background-color: transparent rgba(98, 120, 177, 0.3);
     border: 1px solid rgba(98, 120, 177, 0.3);
@@ -112,7 +112,7 @@ figure, figcaption {
 }
 
 .search-input::placeholder {
-    color: $place-hold-txt-col;
+    color: variables.$place-hold-txt-col;
 } 
 
 .discover-cards-wrapper,
@@ -162,6 +162,10 @@ figure, figcaption {
         gap: 2rem;
     }
 
+    .genres {
+        padding-bottom: 6rem;
+    }
+
     .card {
         width: calc(12.5% - 17.5px); 
         padding: 1.6rem;
@@ -197,7 +201,7 @@ figure, figcaption {
 .purple { background: variables.$purp-bg-col; }
 .pink { background: variables.$pink-bg-col; }
 .violet { background: variables.$violet-bg-col; }
-.gray { background:$gray-bg-col; }
+.gray { background: variables.$gray-bg-col; }
 .gold { background: variables.$gold-bg-col; }
 .green { background: variables.$green-bg-col; }
 .orange2 { background:variables.$oran2-bg-col; }
@@ -207,4 +211,3 @@ figure, figcaption {
 .darkblue { background: variables.$darkbl-bg-col; }
 .red2 { background: variables.$red-nd-bg-col; }
 .sky { background: variables.$sky-bg-color;  }
-
