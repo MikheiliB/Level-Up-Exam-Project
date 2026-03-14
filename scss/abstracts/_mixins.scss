@@ -56,3 +56,27 @@
         opacity: 1;
     }
 }
+
+// Search mixins
+
+@mixin card-text-style {
+    color: $card-text-col;
+    font-weight: $crd-txt-fnt-wght;
+    font-size: $crd-fnt-size;
+    font-family: $all-txt-font;
+    line-height: 1.2;
+    letter-spacing: -0.02em; 
+}
+@mixin main-title-style {
+    color: $main-titl-col;
+    font-weight: $main-titl-fnt-wght;
+    font-family: $all-txt-font;
+    font-size: $crd-fnt-size;
+    margin-bottom: 2rem;
+}
+@mixin section-text-style {
+    font-family: $all-txt-font;
+    font-weight: $section-titl-wght;
+    font-size: $section-titl-font-size;
+    color: $main-titl-col;
+}

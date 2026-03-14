@@ -6,6 +6,7 @@
 @use "../layout/maincontent";
 @use "../layout/player";
 @use "../layout/friends";
+// @use "../layout/search";
 
 body {
     display: flex;
@@ -17,12 +18,10 @@ body {
         width: 100%;
         margin-bottom: 12rem;
     }
-
     .friends-section {
         display: none;
     }
 }
-
 
 @media (min-width: 60rem) {
     body {
