@@ -37,6 +37,11 @@ figure, figcaption {
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    transition: transform 0.5s ease;
+
+    &:hover {
+        transform: scale(105%);
+    }
 }
 
 
@@ -49,6 +54,11 @@ figure, figcaption {
 .searches-artist-third {
     height: auto;
     position: relative;
+    transition: transform 0.5s ease;
+
+    &:hover{
+        transform: scale(105%);
+    }
 }
  .artist-images {
    
@@ -130,6 +140,11 @@ figure, figcaption {
     position: relative;
     overflow: hidden; 
     cursor: pointer;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+        transform: scale(105%);
+    }
 }
 
 .card-title {
