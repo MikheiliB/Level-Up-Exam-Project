@@ -251,6 +251,7 @@ figure, figcaption {
   font-weight: 500;
   font-size: 1.8rem;
   color: rgb(224, 224, 224);
+  padding: 2rem 0;
 }
 
 .main-section {
@@ -304,17 +305,18 @@ figure, figcaption {
   font-family: Satoshi;
   font-weight: 500;
   font-size: 1.4rem;
+  padding-top: 2rem;
 }
 
 .artist-background {
   position: absolute;
   z-index: 1;
   top: -1rem;
-  right: -0.55rem;
-  width: 107%;
-  height: 100%;
+  right: 0.5rem;
+  width: 95%;
+  height: auto;
   background-color: transparent rgba(98, 120, 177, 0.3);
-  border: 1px solid rgba(98, 120, 177, 0.3);
+  border: 1rem solid rgba(98, 120, 177, 0.2);
   border-radius: 1rem;
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
 }
@@ -365,6 +367,8 @@ figure, figcaption {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 .card {
@@ -400,10 +404,15 @@ figure, figcaption {
   height: 9rem;
   right: -1.5rem;
   bottom: -1rem;
-  transform: rotate(25deg);
+  transform: rotate(-25deg);
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
   z-index: 1;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.card-img:hover {
+  transform: rotate(-5deg) scale(1.2);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 60rem) {
@@ -413,6 +422,7 @@ figure, figcaption {
   .discover-cards-wrapper,
   .genre-cards-wrapper {
     gap: 2rem;
+    padding: 0 1.5rem 1.5rem 0;
   }
   .genres {
     padding-bottom: 6rem;
