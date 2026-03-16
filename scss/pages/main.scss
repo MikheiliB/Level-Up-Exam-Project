@@ -6,7 +6,7 @@
 @use "../layout/maincontent";
 @use "../layout/player";
 @use "../layout/friends";
-// @use "../layout/search";
+@use "../layout/search";
 
 body {
     display: flex;

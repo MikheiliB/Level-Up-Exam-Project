@@ -217,19 +217,21 @@ figure, figcaption {
 
 }
 
-.blue { background: variables.$blucard-bg-col;}
-.orange { background: variables.$orange-bg-col; }
-.navy { background: variables.$navy-bg-col; }
-.purple { background: variables.$purp-bg-col; }
-.pink { background: variables.$pink-bg-col; }
-.violet { background: variables.$violet-bg-col; }
-.gray { background: variables.$gray-bg-col; }
-.gold { background: variables.$gold-bg-col; }
-.green { background: variables.$green-bg-col; }
-.orange2 { background:variables.$oran2-bg-col; }
-.brown { background: variables.$brown-bg-col; }
-.teal { background: variables.$teal-bg-col; }
-.red { background: variables.$red-bg-col; }
-.darkblue { background: variables.$darkbl-bg-col; }
-.red2 { background: variables.$red-nd-bg-col; }
-.sky { background: variables.$sky-bg-color;  }
+.card {
+    &.blue { background: variables.$blucard-bg-col;}
+    &.orange { background: variables.$orange-bg-col; }
+    &.navy { background: variables.$navy-bg-col; }
+    &.purple { background: variables.$purp-bg-col; }
+    &.pink { background: variables.$pink-bg-col; }
+    &.violet { background: variables.$violet-bg-col; }
+    &.gray { background: variables.$gray-bg-col; }
+    &.gold { background: variables.$gold-bg-col; }
+    &.green { background: variables.$green-bg-col; }
+    &.orange2 { background:variables.$oran2-bg-col; }
+    &.brown { background: variables.$brown-bg-col; }
+    &.teal { background: variables.$teal-bg-col; }
+    &.red { background: variables.$red-bg-col; }
+    &.darkblue { background: variables.$darkbl-bg-col; }
+    &.red2 { background: variables.$red-nd-bg-col; }
+    &.sky { background: variables.$sky-bg-color;  }
+}
